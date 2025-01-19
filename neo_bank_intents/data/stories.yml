@@ -1,0 +1,53 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet and ask services
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_services
+  - action: utter_services
+
+- story: ask personal information
+  steps:
+  - intent: ask_personal_info
+  - action: utter_personal_info
+
+- story: user asks about countries
+  steps:
+  - intent: countries_served
+  - action: action_list_countries
+
+- story: what can do
+  steps:
+  - intent: help_you
+  - action: utter_help
+

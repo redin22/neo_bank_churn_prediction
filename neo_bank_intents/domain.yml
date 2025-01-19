@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_services
+  - ask_personal_info
+  - countries_served
+  - help_you
+
+actions:
+  - action_list_countries
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a great day!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_services:
+  - text: "We currently offer the following services: ATM Transaction, cryptocurrency services, bank deposits, and withdrawals."
+
+  utter_personal_info:
+  - text: "You may need to provide us with your name, date of birth, address, country, job and let us know if you have banked with someone else before. We never ask for your PIN and passwords!"
+
+  utter_help:
+  - text: "I can say hello and goodbye, tell you services we offer, the details we need from you when looking up your account or creating one for you, and the countries you can find us in."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
